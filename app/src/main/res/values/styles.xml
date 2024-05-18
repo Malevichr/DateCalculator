@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalenderViewCustom">
+        <![CDATA[<style name="CalenderViewCustom" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">         <item name="colorAccent"><day selection color></item>         <item name="colorOnPrimary"><text color></item>         <item name="colorSurface"><background color></item> </style>]]></style>
+</resources>
