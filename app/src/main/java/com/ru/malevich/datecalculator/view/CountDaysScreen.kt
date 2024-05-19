@@ -29,8 +29,8 @@ fun CountDaysScreen(
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
-        DateSelect(dateState = startDate, modifier)
-        DateSelect(dateState = endDate, modifier)
+        DateSelect(dateState = startDate, "Start date", modifier)
+        DateSelect(dateState = endDate, "End date", modifier)
 
         Text(
             text = "Result: ${dateResult.value.days} days, \n" +

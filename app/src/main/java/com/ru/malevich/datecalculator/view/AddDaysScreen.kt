@@ -55,7 +55,11 @@ fun AddDaysScreen(
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())
     ) {
-        DateSelect(startDate, modifier)
+        DateSelect(
+            startDate,
+            "Start Date",
+            modifier
+        )
 
         IntPicker(years, "Years", modifier)
         IntPicker(month, "Month", modifier)
@@ -98,7 +102,10 @@ fun IntPicker(intState: MutableIntState, text: String, modifier: Modifier = Modi
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DateSelect(dateState: MutableState<LocalDate>, modifier: Modifier = Modifier) {
+fun DateSelect(
+    dateState: MutableState<LocalDate>,
+    label: String,
+    modifier: Modifier = Modifier) {
     val openStartDatePickerDialog = remember {
         mutableStateOf(false)
     }
@@ -110,7 +117,7 @@ fun DateSelect(dateState: MutableState<LocalDate>, modifier: Modifier = Modifier
             openStartDatePickerDialog.value = true
         },
         label = {
-            Text("Start Date")
+            Text(label)
         },
         colors = OutlinedTextFieldDefaults.colors(
             disabledBorderColor = Color(30, 30, 30),
