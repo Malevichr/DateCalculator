@@ -14,9 +14,9 @@
         android:theme="@style/Theme.DateCalculator"
         tools:targetApi="31">
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".view.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.DateCalculator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
